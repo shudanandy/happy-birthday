@@ -1,3 +1,12 @@
+// === 背景音乐设置 ===
+const bgMusic = document.getElementById("bg-music");
+
+document.body.addEventListener("click", function playMusicOnce() {
+  bgMusic.play();
+  document.body.removeEventListener("click", playMusicOnce);
+});
+// === 背景音乐设置结束 ===
+
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
